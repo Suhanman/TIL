@@ -47,7 +47,7 @@
 - `# ufw status [numbered]`: 방화벽 상태 및 규칙 확인 (numbered 옵션 시 규칙 번호 출력)
 - `# ufw allow [port/protocol]`: 허용 규칙 추가
 - `# ufw deny [port/protocol]`: 거부 규칙 추가
-- `# ufw delete [규칙 번호]`: 규칙 번호를 사용해 규칙 제거
+- `# ufw delete [규칙 번호]`: 규칙 번호를 사용해 규칙 제거함
 
 ---
 
