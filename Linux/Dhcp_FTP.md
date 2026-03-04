@@ -57,94 +57,53 @@ FTP 접속 후 사용하는 주요 명령어 모음입니다.
 | `lcd` | 로컬 이동 | 접속한 PC(로컬)의 디렉토리 이동 |
 | `quit` | 종료 | FTP 연결 끊기 및 프로그램 종료 |
 
-## 4. FTP 클라이언트 서버 설정
-  25 anonymous_enable=NO
-- 익명 계정 활성화 여부
+## 5. FTP 클라이언트 서버 설정
+### vsftpd 서버 주요 설정 (`vsftpd.conf`)
+서버의 보안과 사용자 권한을 제어하는 핵심 설정값입니다.
 
-28 local_enable=YES
-- 일반 계정 활성화 여부
+* **계정 활성화**
+    * `25` **anonymous_enable=NO**: 익명 계정 접속 차단
+    * `28` **local_enable=YES**: 서버 로컬 계정 사용자 접속 허용
+* **권한 및 배너**
+    * `31` **#write_enable=YES**: 일반 계정의 쓰기(업로드 등) 권한 허용 여부
+    * `35` **#local_umask=022**: 파일 업로드 시 적용될 기본 umask 값
+    * `103` **#ftpd_banner=...**: 접속 시 출력될 환영 메시지 설정
+    * **banner_file=/etc/vsftpd_banner**: 배너 내용을 별도 파일로 관리할 경우 설정
 
-31 #write_enable=YES
-- 일반 계정 업로드 허용 여부
+---
 
-35 #local_umask=022
-- 일반 사용자 업로드 시 umask 값
+## 3. chroot (사용자 격리 설정)
+접속한 사용자의 **홈 디렉터리를 최상위 디렉터리(`/`)로 인식**시켜, 상위 디렉터리로의 접근을 제한하는 보안 설정입니다.
 
-103 #ftpd_banner=~~~
-banner_file=/etc/vsftpd_banner
-- ftp 접속 시 출력되는 배너 설정
+### 관련 설정 (Line 124~)
+* `124` **chroot_list_enable=YES**: 특정 사용자를 지정할 리스트 기능 활성화
+* `126` **chroot_list_file=/etc/vsftpd.chroot_list**: 리스트 파일 경로 지정
+* `127` **allow_writeable_chroot=YES**: chroot가 적용된 디렉터리에 쓰기 권한 허용 (보안상 기본값은 거부)
 
+### 설정 조합에 따른 동작
+| 설정 항목 | `chroot_local_user=NO` | `chroot_local_user=YES` |
+| :--- | :--- | :--- |
+| **동작 방식** | 리스트에 **명시된** 사용자만 격리 | 리스트에 **명시되지 않은** 사용자만 격리 |
+| **특징** | 화이트리스트 방식 | 블랙리스트 방식 |
 
+---
 
-* chroot
-- 접속한 사용자의 홈 디렉터리를
-  최상위 디렉터리로 인식 시키는 설정
+## 4. umask (기본 허가권 제어)
+파일이나 디렉터리 생성 시 부여되는 **초기 허가권(Permission)** 값을 제어합니다.
 
-- 사용자가 이용할 수 있는
-  디렉터리를 제한한다
+### 권한 점수 계산
+* **r (read):** 4
+* **w (write):** 2
+* **x (execute):** 1
 
-124 chroot_list_enable=YES
-- chroot 설정이 적용될 사용자를
-  지정할 chroot list 설정 활성화
+> **예시:** `rwxr-xr-x` → (4+2+1) (4+0+1) (4+0+1) = **755**
 
-126 chroot_list_file=/etc/vsftpd.chroot_list
-- list 파일 위치 설정
+### umask 적용 원리 (022 기준)
+기본 최대 권한에서 umask 값을 **뺀** 결과가 실제 권한이 됩니다.
 
-1) chroot_local_user=NO
-- list 파일에 명시된 사용자들 chroot 적용
+| 구분 | 최대 권한 | umask (022) | 최종 권한 | 권한 표기 |
+| :--- | :---: | :---: | :---: | :--- |
+| **디렉터리** | 777 | 022 | **755** | `rwxr-xr-x` |
+| **파일** | 666 | 022 | **644** | `rw-r--r--` |
 
-2) chroot_local_user=YES
-- list 파일에 명시된 사용자들 chroot 미적용
-
-127 allow_writeable_chroot=YES
-- chroot 적용된 사용자들의 쓰기 권한 허용
-- chroot 설정은 기본적으로 쓰기 권한을 허용하지 않는다
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-* umask
-- 파일, 디렉터리의 초기 허가권 값을
-  제어하는 값
-
-  r w x r - x r - x   =   7 5 5
-
-r = 4
-w= 2
-x = 1
-- = 0
-
-
-0 2 2 = - - -   - w -   - w -
-
-디렉터리 777
-파일 666
-umask 022
-
-
-777 = r w x r w x r w x
-0 2 2 = - - -  - w -  - w -
-==============
-r w x  r - x  r - x
-
-
-
-
-
+---
