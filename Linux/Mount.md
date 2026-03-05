@@ -1,17 +1,69 @@
-# 리눅스 스토리지 & 네트워크 서비스 노트
 
----
+##  HDD 관리
 
-## 목차
+### HDD 작업 순서
 
-1. [파티션 종류](#1-파티션-종류)
-2. [오토 마운트 (Auto Mount)](#2-오토-마운트-auto-mount)
-3. [NFS (Network File System)](#3-nfs-network-file-system)
-4. [RAID](#4-raid)
-5. [Proxy (프록시)](#5-proxy-프록시)
-6. [부하 분산 (Load Balancing)](#6-부하-분산-load-balancing)
+```
+1. 하드 디스크 추가 (SCSI 방식)
+2. HDD 이름 확인
+3. 파티션 작업 (fdisk)
+4. 포맷 (mkfs)
+5. 마운트 (mount)
+```
 
----
+### HDD 이름 확인
+
+```bash
+fdisk -l <hdd 장치명>
+```
+
+### 파티션 작업 (fdisk)
+
+```bash
+fdisk /dev/sdb
+```
+
+| 명령 | 동작 |
+|------|------|
+| `d` | 파티션 삭제 |
+| `n` | 파티션 추가 |
+| `p` | 파티션 테이블 확인 |
+| `q` | 저장 없이 종료 |
+| `w` | 저장 후 종료 |
+
+### 포맷 (mkfs)
+
+```bash
+sudo mkfs.ext4 /dev/sdb1
+# 또는
+sudo mkfs -t ext4 /dev/sdb1
+```
+
+### 마운트 (mount)
+
+```bash
+# 마운트 연동
+sudo mount /dev/sdb1 /mp/
+
+# 마운트 확인
+sudo df -h
+
+# 마운트 해제
+sudo umount /dev/sdb1
+# 또는
+sudo umount /mp/
+```
+
+> M.P(Mount Point) : 사용되지 않는 빈 디렉터리를 HDD 장치와 연동하는 디렉터리
+
+### 마운트 유의사항
+
+1. M.P는 **사용되지 않는** 임의의 디렉터리여야 함
+2. mount/umount 명령 시 현재 경로가 M.P 디렉터리여서는 안 됨 (사용 중 변경 불가)
+3. 하나의 파티션은 반드시 **하나의 M.P** 만 사용 (1:1 대응)
+4. 포맷 및 마운트 대상은 **주 파티션(P), 논리 파티션(L)** 만 가능 (확장 파티션(E) 불가)
+5. 파티션 작업 시 반드시 마운트 연동을 해제하고 진행
+
 
 ## 1. 파티션 종류
 
@@ -117,23 +169,4 @@ mount -t nfs 192.168.108.10:/nfs_server /nfs_client
 
 ---
 
-## 4. RAID
 
-> **R**edundant **A**rray of **I**ndependent **D**isks  
-> 여러 개의 하드 디스크를 하나의 디스크로 결합하여 데이터를 저장·관리하는 기술  
-> 데이터의 안정성과 성능을 향상시키기 위해 사용
-
-### RAID 종류 요약
-
-| 종류 | 이름 | 최소 디스크 | 특징 |
-|------|------|-------------|------|
-| Linear | 선형 RAID | 2개 | 순차 저장, 하나 고장 시 전체 손실 |
-| RAID 0 | Striping | 2개 | 병렬 저장, 성능 최고, 하나 고장 시 전체 손실 |
-| RAID 1 | Mirroring | 2개 | 중복 저장, 안전성 최고, 용량 50% |
-| RAID 2 | — | — | 현재 사용 안 함 |
-| RAID 3 | 패리티 비트 | — | 현재 사용 안 함 |
-| RAID 4 | 패리티 비트 | 3개 | 전용 패리티 디스크 사용, 수명 단축 |
-| RAID 5 | Striping with Parity | 3개 | 패리티 분산 저장, RAID 4 개선 |
-| RAID 6 | Striping with Dual Parity | 4개 | 이중 패리티, 디스크 2개 고장 시에도 복구 가능 |
-
----
