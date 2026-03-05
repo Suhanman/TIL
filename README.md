@@ -16,7 +16,7 @@
 
 ---
 
-## 🐧 리눅스 
+## 🐧 리눅스 (25년 초 공부)
 - [DNS](./Linux/DNS.md)
 - [DHCP+FTP](./Linux/Dhcp_FTP.md)
 - [TEST](./Linux/test.md)
