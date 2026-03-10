@@ -39,8 +39,8 @@
 - [DNS](./Network/DNS.md)
 - [라우터기초](./Network/Router_info.md)
 - [라우터명령어](./Network/Router_Command.md)
-- [라우터알고리즘](./Network/Routeing_Algorithm.md)
-- [라우터프로토콜](./Network/Routeing_Protocol.md)
+- [라우터알고리즘](./Network/Routing_Algorithm.md)
+- [라우터프로토콜](./Network/Routing_Protocol.md)
 
 ---
 ## 🌐 Docker 
