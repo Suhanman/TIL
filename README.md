@@ -30,4 +30,9 @@
 
 
 ---
-## 🌐 네트워크 (26년 초 공부)
+## 🌐 네트워크 (26년 초 공부(재학습))
+- [NetworkBasic](./Network/NetworkBasic.md)
+- [TCPIP_4_Layer](./Network/TCPIP_4_Layer.md)
+- [3_4_Layer](./Network/3_4_Layer.md)
+- [567_Layer](./Network/567_Layer.md)
+- [DNS](./Network/DNS.md)
