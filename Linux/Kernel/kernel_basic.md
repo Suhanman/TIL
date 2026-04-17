@@ -57,7 +57,10 @@ OS의 핵심 구성 요소로, 중요한 시스템 프로세스를 관리하고 
 
 ---
 
-## Linux 커널 아키텍처
+## Linux 커널 아키텍처(영역구분)
+
+<img width="567" height="400" alt="image" src="https://github.com/user-attachments/assets/be4477ee-b9ff-4f4b-8f3c-53174dcdff06" />
+
 
 ### 1. User Space → System Call Interface
 프로세스들이 파일 읽기, 메모리 할당, 네트워크 통신 등의 작업이 필요할 때 시스템콜 인터페이스를 통해 커널에 요청을 보낸다.
