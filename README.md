@@ -27,6 +27,7 @@
 - [WEB](./Linux/linux_webserver_notes.md)
 - [Linux_System](./Linux/linux_notes.md)
 - [Docker](./Linux/docker_notes.md)
+- [커널기초](./Linux/Kernel/kernel_basic.md)
 
 
 ---
