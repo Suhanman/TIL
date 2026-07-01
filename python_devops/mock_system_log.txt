@@ -1,0 +1,100 @@
+{"timestamp": "2026-07-01 09:00:06.233", "level": "INFO", "service": "CacheManager", "message": "User login successful for user_id: 9649."}
+{"timestamp": "2026-07-01 09:00:08.428", "level": "ERROR", "service": "UserProfileAPI", "message": "Payment processing failed for user_id: 8348. Error: Insufficient funds."}
+{"timestamp": "2026-07-01 09:00:17.468", "level": "ERROR", "service": "DatabaseConnector", "message": "Failed to write to cache cluster: Connection refused."}
+{"timestamp": "2026-07-01 09:00:31.160", "level": "INFO", "service": "UserProfileAPI", "message": "Connection established to master database."}
+{"timestamp": "2026-07-01 09:00:38.541", "level": "ERROR", "service": "AuthService", "message": "Payment processing failed for user_id: 5539. Error: Insufficient funds."}
+{"timestamp": "2026-07-01 09:00:54.101", "level": "INFO", "service": "DatabaseConnector", "message": "Session token refreshed for user_id: 4532."}
+{"timestamp": "2026-07-01 09:01:07.029", "level": "ERROR", "service": "PaymentGateway", "message": "Database connection timeout after 5000ms."}
+{"timestamp": "2026-07-01 09:01:21.999", "level": "INFO", "service": "PaymentGateway", "message": "Session token refreshed for user_id: 7716."}
+{"timestamp": "2026-07-01 09:01:35.171", "level": "WARN", "service": "PaymentGateway", "message": "Connection pool utilization at 85%."}
+{"timestamp": "2026-07-01 09:01:49.657", "level": "DEBUG", "service": "CacheManager", "message": "Memory usage: 142MB / 512MB."}
+{"timestamp": "2026-07-01 09:01:56.484", "level": "DEBUG", "service": "DatabaseConnector", "message": "Memory usage: 142MB / 512MB."}
+{"timestamp": "2026-07-01 09:02:07.231", "level": "WARN", "service": "DatabaseConnector", "message": "Failed to fetch profile image for user_id: 7967. Retrying..."}
+{"timestamp": "2026-07-01 09:02:09.864", "level": "INFO", "service": "PaymentGateway", "message": "Cache cleared for key: user_5183_profile."}
+{"timestamp": "2026-07-01 09:02:15.697", "level": "INFO", "service": "CacheManager", "message": "Connection established to master database."}
+{"timestamp": "2026-07-01 09:02:28.667", "level": "WARN", "service": "UserProfileAPI", "message": "Slow query detected: SELECT * FROM orders WHERE user_id=6414 (1182ms)."}
+{"timestamp": "2026-07-01 09:02:32.907", "level": "WARN", "service": "AuthService", "message": "Connection pool utilization at 85%."}
+{"timestamp": "2026-07-01 09:02:34.993", "level": "INFO", "service": "PaymentGateway", "message": "API request processed successfully in 1034ms."}
+{"timestamp": "2026-07-01 09:02:38.982", "level": "INFO", "service": "DatabaseConnector", "message": "API request processed successfully in 1195ms."}
+{"timestamp": "2026-07-01 09:02:51.499", "level": "INFO", "service": "AuthService", "message": "Cache cleared for key: user_3879_profile."}
+{"timestamp": "2026-07-01 09:02:53.839", "level": "INFO", "service": "PaymentGateway", "message": "Session token refreshed for user_id: 9949."}
+{"timestamp": "2026-07-01 09:02:59.037", "level": "INFO", "service": "CacheManager", "message": "Session token refreshed for user_id: 5148."}
+{"timestamp": "2026-07-01 09:03:14.017", "level": "INFO", "service": "CacheManager", "message": "Connection established to master database."}
+{"timestamp": "2026-07-01 09:03:17.418", "level": "INFO", "service": "CacheManager", "message": "Connection established to master database."}
+{"timestamp": "2026-07-01 09:03:21.598", "level": "INFO", "service": "CacheManager", "message": "API request processed successfully in 252ms."}
+{"timestamp": "2026-07-01 09:03:26.144", "level": "WARN", "service": "CacheManager", "message": "Slow query detected: SELECT * FROM orders WHERE user_id=1097 (194ms)."}
+{"timestamp": "2026-07-01 09:03:29.464", "level": "INFO", "service": "PaymentGateway", "message": "Connection established to master database."}
+{"timestamp": "2026-07-01 09:03:41.409", "level": "INFO", "service": "PaymentGateway", "message": "Session token refreshed for user_id: 4952."}
+{"timestamp": "2026-07-01 09:03:54.139", "level": "INFO", "service": "AuthService", "message": "API request processed successfully in 157ms."}
+{"timestamp": "2026-07-01 09:03:56.510", "level": "INFO", "service": "DatabaseConnector", "message": "Connection established to master database."}
+{"timestamp": "2026-07-01 09:04:03.375", "level": "INFO", "service": "DatabaseConnector", "message": "Connection established to master database."}
+{"timestamp": "2026-07-01 09:04:17.137", "level": "ERROR", "service": "DatabaseConnector", "message": "Failed to write to cache cluster: Connection refused."}
+{"timestamp": "2026-07-01 09:04:24.823", "level": "DEBUG", "service": "CacheManager", "message": "Fetching data from database for user_id: 3711."}
+{"timestamp": "2026-07-01 09:04:32.560", "level": "INFO", "service": "UserProfileAPI", "message": "Connection established to master database."}
+{"timestamp": "2026-07-01 09:04:36.960", "level": "INFO", "service": "DatabaseConnector", "message": "API request processed successfully in 106ms."}
+{"timestamp": "2026-07-01 09:04:38.124", "level": "INFO", "service": "CacheManager", "message": "API request processed successfully in 1229ms."}
+{"timestamp": "2026-07-01 09:04:42.463", "level": "ERROR", "service": "PaymentGateway", "message": "Payment processing failed for user_id: 6815. Error: Insufficient funds."}
+{"timestamp": "2026-07-01 09:04:44.878", "level": "DEBUG", "service": "PaymentGateway", "message": "Fetching data from database for user_id: 3012."}
+{"timestamp": "2026-07-01 09:04:48.999", "level": "WARN", "service": "AuthService", "message": "Failed to fetch profile image for user_id: 8498. Retrying..."}
+{"timestamp": "2026-07-01 09:04:51.733", "level": "WARN", "service": "AuthService", "message": "Failed to fetch profile image for user_id: 4622. Retrying..."}
+{"timestamp": "2026-07-01 09:05:02.790", "level": "WARN", "service": "UserProfileAPI", "message": "Failed to fetch profile image for user_id: 5750. Retrying..."}
+{"timestamp": "2026-07-01 09:05:11.093", "level": "INFO", "service": "PaymentGateway", "message": "Cache cleared for key: user_5022_profile."}
+{"timestamp": "2026-07-01 09:05:20.784", "level": "ERROR", "service": "CacheManager", "message": "Database connection timeout after 5000ms."}
+{"timestamp": "2026-07-01 09:05:32.619", "level": "ERROR", "service": "DatabaseConnector", "message": "Internal Server Error (500) on POST /api/v1/checkout."}
+{"timestamp": "2026-07-01 09:05:34.559", "level": "INFO", "service": "PaymentGateway", "message": "Cache cleared for key: user_9032_profile."}
+{"timestamp": "2026-07-01 09:05:46.455", "level": "ERROR", "service": "PaymentGateway", "message": "Database connection timeout after 5000ms."}
+{"timestamp": "2026-07-01 09:05:59.610", "level": "INFO", "service": "DatabaseConnector", "message": "Cache cleared for key: user_2765_profile."}
+{"timestamp": "2026-07-01 09:06:02.545", "level": "INFO", "service": "UserProfileAPI", "message": "User login successful for user_id: 5943."}
+{"timestamp": "2026-07-01 09:06:09.800", "level": "WARN", "service": "DatabaseConnector", "message": "API rate limit approaching for IP: 192.168.1.72."}
+{"timestamp": "2026-07-01 09:06:22.773", "level": "WARN", "service": "CacheManager", "message": "API rate limit approaching for IP: 192.168.1.208."}
+{"timestamp": "2026-07-01 09:06:25.424", "level": "DEBUG", "service": "PaymentGateway", "message": "Memory usage: 142MB / 512MB."}
+{"timestamp": "2026-07-01 09:06:35.051", "level": "INFO", "service": "DatabaseConnector", "message": "Cache cleared for key: user_9007_profile."}
+{"timestamp": "2026-07-01 09:06:50.472", "level": "INFO", "service": "PaymentGateway", "message": "Connection established to master database."}
+{"timestamp": "2026-07-01 09:06:53.439", "level": "INFO", "service": "UserProfileAPI", "message": "Session token refreshed for user_id: 8237."}
+{"timestamp": "2026-07-01 09:07:03.750", "level": "DEBUG", "service": "DatabaseConnector", "message": "Fetching data from database for user_id: 3039."}
+{"timestamp": "2026-07-01 09:07:18.638", "level": "INFO", "service": "CacheManager", "message": "Connection established to master database."}
+{"timestamp": "2026-07-01 09:07:31.565", "level": "INFO", "service": "DatabaseConnector", "message": "User login successful for user_id: 7905."}
+{"timestamp": "2026-07-01 09:07:34.869", "level": "INFO", "service": "CacheManager", "message": "Cache cleared for key: user_5068_profile."}
+{"timestamp": "2026-07-01 09:07:47.623", "level": "INFO", "service": "CacheManager", "message": "User login successful for user_id: 3044."}
+{"timestamp": "2026-07-01 09:07:53.317", "level": "INFO", "service": "UserProfileAPI", "message": "User login successful for user_id: 5127."}
+{"timestamp": "2026-07-01 09:08:05.837", "level": "WARN", "service": "UserProfileAPI", "message": "API rate limit approaching for IP: 192.168.1.34."}
+{"timestamp": "2026-07-01 09:08:15.127", "level": "WARN", "service": "PaymentGateway", "message": "Failed to fetch profile image for user_id: 7232. Retrying..."}
+{"timestamp": "2026-07-01 09:08:18.400", "level": "INFO", "service": "DatabaseConnector", "message": "User login successful for user_id: 6193."}
+{"timestamp": "2026-07-01 09:08:30.711", "level": "INFO", "service": "UserProfileAPI", "message": "API request processed successfully in 1120ms."}
+{"timestamp": "2026-07-01 09:08:36.158", "level": "INFO", "service": "AuthService", "message": "User login successful for user_id: 4792."}
+{"timestamp": "2026-07-01 09:08:46.872", "level": "INFO", "service": "UserProfileAPI", "message": "API request processed successfully in 1473ms."}
+{"timestamp": "2026-07-01 09:09:02.013", "level": "INFO", "service": "DatabaseConnector", "message": "API request processed successfully in 1158ms."}
+{"timestamp": "2026-07-01 09:09:05.752", "level": "ERROR", "service": "CacheManager", "message": "Failed to write to cache cluster: Connection refused."}
+{"timestamp": "2026-07-01 09:09:20.923", "level": "INFO", "service": "PaymentGateway", "message": "Cache cleared for key: user_6216_profile."}
+{"timestamp": "2026-07-01 09:09:30.340", "level": "ERROR", "service": "DatabaseConnector", "message": "Payment processing failed for user_id: 8939. Error: Insufficient funds."}
+{"timestamp": "2026-07-01 09:09:44.767", "level": "WARN", "service": "CacheManager", "message": "API rate limit approaching for IP: 192.168.1.20."}
+{"timestamp": "2026-07-01 09:09:52.140", "level": "INFO", "service": "AuthService", "message": "API request processed successfully in 553ms."}
+{"timestamp": "2026-07-01 09:09:53.210", "level": "WARN", "service": "AuthService", "message": "Connection pool utilization at 85%."}
+{"timestamp": "2026-07-01 09:10:01.995", "level": "INFO", "service": "AuthService", "message": "Connection established to master database."}
+{"timestamp": "2026-07-01 09:10:10.253", "level": "INFO", "service": "DatabaseConnector", "message": "Session token refreshed for user_id: 4014."}
+{"timestamp": "2026-07-01 09:10:20.682", "level": "WARN", "service": "CacheManager", "message": "Failed to fetch profile image for user_id: 6532. Retrying..."}
+{"timestamp": "2026-07-01 09:10:25.384", "level": "WARN", "service": "DatabaseConnector", "message": "Connection pool utilization at 85%."}
+{"timestamp": "2026-07-01 09:10:37.095", "level": "DEBUG", "service": "PaymentGateway", "message": "Memory usage: 142MB / 512MB."}
+{"timestamp": "2026-07-01 09:10:40.388", "level": "ERROR", "service": "CacheManager", "message": "Failed to write to cache cluster: Connection refused."}
+{"timestamp": "2026-07-01 09:10:41.663", "level": "INFO", "service": "AuthService", "message": "API request processed successfully in 693ms."}
+{"timestamp": "2026-07-01 09:10:49.449", "level": "INFO", "service": "CacheManager", "message": "User login successful for user_id: 2341."}
+{"timestamp": "2026-07-01 09:10:52.313", "level": "INFO", "service": "PaymentGateway", "message": "API request processed successfully in 189ms."}
+{"timestamp": "2026-07-01 09:10:53.823", "level": "INFO", "service": "DatabaseConnector", "message": "Cache cleared for key: user_7212_profile."}
+{"timestamp": "2026-07-01 09:11:08.900", "level": "WARN", "service": "UserProfileAPI", "message": "API rate limit approaching for IP: 192.168.1.19."}
+{"timestamp": "2026-07-01 09:11:21.104", "level": "ERROR", "service": "PaymentGateway", "message": "Failed to write to cache cluster: Connection refused."}
+{"timestamp": "2026-07-01 09:11:29.629", "level": "DEBUG", "service": "AuthService", "message": "Fetching data from database for user_id: 6931."}
+{"timestamp": "2026-07-01 09:11:44.054", "level": "INFO", "service": "AuthService", "message": "API request processed successfully in 1012ms."}
+{"timestamp": "2026-07-01 09:11:47.513", "level": "INFO", "service": "CacheManager", "message": "User login successful for user_id: 3792."}
+{"timestamp": "2026-07-01 09:11:51.198", "level": "INFO", "service": "DatabaseConnector", "message": "Cache cleared for key: user_4245_profile."}
+{"timestamp": "2026-07-01 09:11:53.131", "level": "INFO", "service": "AuthService", "message": "API request processed successfully in 1390ms."}
+{"timestamp": "2026-07-01 09:11:55.385", "level": "INFO", "service": "AuthService", "message": "User login successful for user_id: 7545."}
+{"timestamp": "2026-07-01 09:11:58.521", "level": "INFO", "service": "DatabaseConnector", "message": "API request processed successfully in 194ms."}
+{"timestamp": "2026-07-01 09:12:03.729", "level": "INFO", "service": "CacheManager", "message": "Cache cleared for key: user_3566_profile."}
+{"timestamp": "2026-07-01 09:12:15.148", "level": "INFO", "service": "CacheManager", "message": "User login successful for user_id: 8537."}
+{"timestamp": "2026-07-01 09:12:28.540", "level": "WARN", "service": "PaymentGateway", "message": "Connection pool utilization at 85%."}
+{"timestamp": "2026-07-01 09:12:31.474", "level": "INFO", "service": "UserProfileAPI", "message": "API request processed successfully in 370ms."}
+{"timestamp": "2026-07-01 09:12:45.548", "level": "INFO", "service": "UserProfileAPI", "message": "Session token refreshed for user_id: 4963."}
+{"timestamp": "2026-07-01 09:12:51.857", "level": "INFO", "service": "PaymentGateway", "message": "Session token refreshed for user_id: 7946."}
+{"timestamp": "2026-07-01 09:12:59.215", "level": "WARN", "service": "CacheManager", "message": "API rate limit approaching for IP: 192.168.1.244."}
+{"timestamp": "2026-07-01 09:13:06.516", "level": "INFO", "service": "PaymentGateway", "message": "User login successful for user_id: 8892."}
+{"timestamp": "2026-07-01 09:13:22.022", "level": "WARN", "service": "DatabaseConnector", "message": "API rate limit approaching for IP: 192.168.1.181."}
