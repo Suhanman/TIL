@@ -1,0 +1,20 @@
+[
+  {
+    "service": "auth-service",
+    "enabled": true,
+    "port": 8080,
+    "replicas": 3
+  },
+  {
+    "service": "payment-service",
+    "enabled": false,
+    "port": 8081,
+    "replicas": 1
+  },
+  {
+    "service": "notification-service",
+    "enabled": true,
+    "port": 8082,
+    "replicas": 2
+  }
+]
